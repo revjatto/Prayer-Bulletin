@@ -1,0 +1,21 @@
+﻿#schoolscontainer .map{margin-top:40px;}
+
+#reportSearch .error{color:Red;}
+#reportSearch input.bt_go
+{
+	color:#FFFFFF; 
+	font-weight: bold;
+	background: url(../images/backgrounds/bkg_gobutton_white.gif) no-repeat; 
+	width: 34px; 
+	height: 26px; 
+	line-height: 26px; 
+	text-align: center; 
+	border: none;
+}
+#reportsList {width:520px;}
+#reportsList h2, #reportsList h2 a{ font-size:0.6em; }
+#reportsList h2{padding-top:10px; text-transform:capitalize; font-weight:bold;}
+/*#reportsList ul li .left{ float:left; width:400px;}
+#reportsList ul li span{ margin-left:20px;}*/
+#reportsList .paging, #reportsList .back-button{float:right;}
+

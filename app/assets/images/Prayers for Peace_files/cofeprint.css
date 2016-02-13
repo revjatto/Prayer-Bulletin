@@ -1,0 +1,8 @@
+ul.dropdown .dropdownmenu { display: none; visibility: hidden; top: -600px; }
+ul.dropdown ul { display: none;  }
+#globalnav ul.dropdown li.toplevel:hover ul li p { display:none; } 
+
+ul.dropdown li:hover > .dropdownmenu { display: none; visibility: hidden; top: -600px; }
+ul.dropdown div.dropdownmenu  { display: none; visibility: hidden; top: -600px; }
+ul.dropdown { display: none; }
+ul.dropdown li a { display: none; }

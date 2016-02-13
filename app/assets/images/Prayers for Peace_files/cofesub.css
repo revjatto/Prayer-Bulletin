@@ -1,0 +1,416 @@
+/* Subsequent pages CSS */
+
+/* --------------------------
+  B R E A D C R U M B
+-------------------------- */
+
+#mainbody #breadcrumb { 
+  color: #553A5E; 
+  font-weight: bold; 
+  font-size: .9em; 
+  font-family: Arial, Helvetica, sans-serif; 
+  height: 32px;
+}
+#mainbody #breadcrumb.subcrumb { padding: 5px 0px 0px 10px;}
+#mainbody #breadcrumb a { color: #444444; font-weight: normal; }
+
+#mainbody #breadcrumb.subcrumb .social_links 
+{ 
+  float: right; 
+  margin-right: 15px; 
+}
+#mainbody #breadcrumb.subcrumb .social_links div
+{ 
+  float: right; 
+}
+
+/* --------------------------
+  C O N T E N T    B O X
+-------------------------- */
+
+#mainbody #maincontent.sub { }
+#mainbody #maincontent .box_high { 
+  float: left; 
+  width: 644px; 
+  height: 275px; 
+  background:url(../images/backgrounds/bkg_home_main.gif) no-repeat; 
+  padding: 8px;
+  margin-right: 10px;
+}
+
+#mainbody #maincontent #box_left, #mainbody #maincontent #box_center, #mainbody #maincontent #box_right {
+  float: left; 
+}
+
+
+#mainbody #maincontent #box_left { width: 220px; margin-left: 5px; }
+#mainbody #maincontent #box_center { width: 535px;  }
+#mainbody #maincontent #box_right { width: 239px; }
+
+/* --------------------------
+  L E F T    N A V 
+-------------------------- */
+
+#box_left ul.sidemenu, #box_left ul.sidemenu ul {
+  list-style: none; 
+  margin-right: 10px;
+}
+
+#box_left ul.sidemenu ul { margin-right: 0px;}
+
+#box_left ul.sidemenu li { margin-bottom: 3px;}
+
+#box_left ul.sidemenu li a { 
+  color: #054A88; 
+  text-decoration: none; 
+  display: block;
+  padding: 4px 18px 4px 8px;
+  font-size: 1em; 
+}
+
+#box_left ul.sidemenu ul li a { padding-left: 18px; }
+#box_left ul.sidemenu ul ul li a { padding-left: 28px; font-size: 1em; }
+#box_left ul.sidemenu ul ul ul li a { padding-left: 38px; }
+
+#box_left ul.sidemenu li a:hover, 
+#box_left ul.sidemenu li a.high,
+#box_left ul.sidemenu li.par ul li a:hover, 
+#box_left ul.sidemenu li.par ul li a.high,
+#box_left ul.sidemenu li.par ul li.par ul li a:hover, 
+#box_left ul.sidemenu li.par ul li.par ul li a.high { 
+  color: #553A5E; 
+  background: #F0F0F0 url(../images/icons/icon_arrow_right.gif) no-repeat right 5px; 
+}
+
+#box_left ul.sidemenu li.par a:hover, 
+#box_left ul.sidemenu li.par a.high,
+#box_left ul.sidemenu li.par ul li.par a:hover, 
+#box_left ul.sidemenu li.par ul li.par a.high,
+#box_left ul.sidemenu li.par ul li.par ul li.par a:hover, 
+#box_left ul.sidemenu li.par ul li.par ul li.par a.high { 
+  background: #F0F0F0 url(../images/icons/icon_arrow_down.gif) no-repeat right 5px; 
+}
+
+#box_left ul.sidemenu li a.high, #box_left ul.sidemenu li a.parhigh { color: #553A5E; font-weight:bold; }
+
+#box_left div.nomenu { width: 220px; height: 1px;}
+
+/* --------------------------
+  M A I N   C O N T E N T
+-------------------------- */
+
+#mainbody #maincontent #box_center .titlewrap { position: relative; height: 151px; }
+
+#mainbody #maincontent #box_center .titlewrap .pagetitle { 
+  position: absolute;
+  background:url(../images/sections/bkg_about.jpg) no-repeat; 
+   left: 0px;
+   top: 0px;
+   width: 520px;
+   height: 131px;
+   display: table;
+}
+
+/*#mainbody #maincontent #box_center .titlewrap .pagetitle h1 { 
+  font-size: 3em; 
+  color: #FFFFFF; 
+  padding: 0px 10px 0px 140px;
+  display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+  text-shadow: #444444 2px 2px 2px;
+  filter: Shadow(Color=#444444, Direction=135, Strength=3);
+}*/
+
+#mainbody #maincontent #box_center h2 { 
+  color: #4C4B4B; 
+  font-size: 2em; 
+  font-family: Arial, Helvetica, sans-serif; 
+  margin: 0px 20px 15px 0px; 
+  clear: left;
+}
+
+#mainbody #maincontent #box_center h3 { font-weight: bold; font-size: 1.2em; margin: 0px 20px 15px 0px;  }
+#mainbody #maincontent #box_center h4 { font-weight: bold; font-size: 1.1em; margin: 0px 20px 15px 0px;  }
+#mainbody #maincontent #box_center h5 { font-weight: bold; font-size: 1.1em; margin: 0px 20px 15px 0px;  }
+
+#mainbody #maincontent #box_center p { margin: 0px 20px 15px 0px; line-height: 1.4em; }
+
+/*#mainbody #maincontent #box_center img { float: left; margin-right: 10px; margin-bottom: 10px; }*/
+#mainbody #maincontent #box_center img {margin-right: 10px; margin-bottom: 10px; }
+
+#mainbody #maincontent #box_center ul, #mainbody #maincontent #box_center ol { margin: 1em 1.5em; line-height: 1.4em; }
+#mainbody #maincontent #box_center ul li, #mainbody #maincontent #box_center ol li { margin-bottom: 0.5em;}
+
+/* --------------------------
+  R I G H T   S U B O X 
+----------------------------*/
+
+#mainbody #maincontent #box_right .subbox  { 
+  width: 239px;
+  margin-bottom: 15px; 
+}
+
+
+
+
+#mainbody #maincontent .subbox .boxtop {
+  padding: 15px 10px 0px 15px;
+  background: url(../images/backgrounds/boxes/box_sml_top.gif) no-repeat; 
+}
+
+#mainbody #maincontent .subbox .boxmid { 
+  padding: 10px 15px;
+  background: url(../images/backgrounds/boxes/box_sml_mid.gif) repeat-y; 
+}
+
+#mainbody #maincontent .subbox .boxbottom { background: url(../images/backgrounds/boxes/box_sml_bot.gif) no-repeat bottom; height: 12px; }
+
+#mainbody #maincontent #box_right .subbox h2, #mainbody #maincontent #box_right .subbox h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+#mainbody #maincontent #box_right .subbox h2 {
+  color:#FFFFFF;
+  font-size: 1.4em;
+  padding: 8px 0px 8px 5px;
+  background: url(../images/backgrounds/boxes/bkg_box_sml_purple.gif) no-repeat;
+}
+#mainbody #maincontent #box_right #box_mediaPress.subbox h2,
+#mainbody #maincontent #box_right #box_links.subbox h2,
+#mainbody #maincontent #box_right #box_res.subbox h2,
+#mainbody #maincontent #box_right #box_tags.subbox h2 { background: url(../images/backgrounds/boxes/bkg_box_sml_grey.gif) no-repeat; }
+
+
+#mainbody #maincontent .box_church_local h2 img { float: right; margin: 0px 10px 0px 0px;}
+
+#mainbody #maincontent .subbox .searchtips { background-color: #F0F0F0; padding: 10px 5px; }
+
+#mainbody #maincontent .subbox .searchtips img.church_thumb { float: left; margin: 0px 10px 10px 0px;}
+
+#mainbody #maincontent .subbox a { color: #054A88; }
+
+#mainbody #maincontent .box_church_local p { margin-bottom: 15px;}
+
+#mainbody #maincontent #box_right .subbox h3,
+#mainbody #maincontent #box_right .subbox h4,
+#mainbody #maincontent #box_right .subbox h5,
+#mainbody #maincontent #box_right .subbox p { margin-bottom: 10px; }
+
+#mainbody #maincontent .subbox ul,
+#mainbody #maincontent .subbox ol { color: #054A88; margin: 0em 1.5em; }
+
+#mainbody #maincontent .subbox ul li,
+#mainbody #maincontent .subbox ol li { margin-bottom: 5px;}
+
+#mainbody #maincontent .box_church_local input.box_search,  #mainbody #maincontent .box_church_local .box_signup{ 
+  width: 155px;
+  height: 20px;
+  margin-bottom:5px; 
+}
+
+#mainbody #maincontent .box_church_local .box_signup{width:180px;}
+
+#mainbody #maincontent .box_church_local input.bt_go { 
+  color:#FFFFFF; 
+  font-weight: bold;
+  background: url(../images/backgrounds/bkg_gobutton2.gif) no-repeat; 
+  width: 30px; 
+  height: 26px; 
+  line-height: 26px; 
+  text-align: center; 
+  border: none;
+  padding: 0px;
+}
+
+#mainbody #maincontent .box_church_local a.bt_NewChurch,
+#mainbody #maincontent .box_church_local a.bt_NewChurchLong  {
+  color: #8D7197;
+  font-weight:bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  background: url(../images/backgrounds/bt_localschool_sub.jpg) no-repeat;
+  text-align: left;
+  width: 154px;
+  height: 28px;
+  line-height: 28px;
+  display: block;
+  padding:0px 0px 0px 27px;
+  text-decoration:none;
+  margin-bottom: 5px;
+} 
+
+#mainbody #maincontent .box_church_local a.bt_NewChurch:hover,
+#mainbody #maincontent .box_church_local a.bt_NewChurchLong:hover  { color: #666666; }
+
+#mainbody #maincontent .box_church_local a.bt_NewChurch { background: url(../images/backgrounds/bt_localchurch_sub.jpg) no-repeat; }
+
+#mainbody #maincontent .box_church_local a.bt_ChurchWebsite { background: url(../images/backgrounds/bt_localwebsite_sub.jpg) no-repeat; margin-top:10px;}
+#mainbody #maincontent .box_church_local img{width:60px; margin-left:5px;}
+#mainbody #maincontent .box_church_local ul{margin:0 0 0 20px; clear:both; color:Black;}
+/*#mainbody #maincontent .box_church_local .churchinfo{text-align:left;}*/
+#mainbody #maincontent .box_church_local h3{font-size:1.3em; font-family: Arial, Helvetica, sans-serif;}
+#mainbody #maincontent .box_church_local h4{font-size:1.1em; font-family: Arial, Helvetica, sans-serif; font-weight:bold; margin-top:10px;}
+
+
+#mainbody #maincontent div.clearer { clear:both; height: 1px; font-size: .1em; }
+
+/* School search */
+#mainbody #maincontent .subbox .searchtips input.textboxtown { display: block; }
+#mainbody #maincontent .subbox .schoolsearch input.bt_go { float: right; margin: -25px 5px 0px 0px;}
+
+/* Point of view */
+
+#mainbody #maincontent #box_center h2.spottitle { 
+  background: #F0F0F0; 
+  width: 510px; 
+  margin-bottom: 15px; 
+  padding: 8px 0px 8px 10px;
+  font-weight: bold;
+}
+
+div.articledatelist { font-style: italic; margin-bottom: 5px;}
+div.articledate { font-size: .9em; font-weight: bold; margin-bottom: 15px;}
+div.viewdate { display: none; }
+
+div.highview { background: #F0F0F0; width: 510px; padding: 5px 0px 5px 10px; margin-bottom: 15px; }
+
+#mainbody #maincontent #box_center div.highview h2 { 
+  margin: 0px 20px 5px 200px;
+  clear: none;
+}
+#mainbody #maincontent #box_center div.highview div.articledatelist,
+#mainbody #maincontent #box_center div.highview p { margin-left: 200px; }
+
+#mainbody #maincontent #box_center div.listview div.articledatelist,
+#mainbody #maincontent #box_center div.listview p { margin-left: 140px; }
+
+#mainbody #maincontent #box_center div.azviewouter { background-color: #F0F0F0; padding: 10px; width: 500px; margin-bottom: 15px; }
+#mainbody #maincontent #box_center div.azview { background-color: #D4CED5; border: solid 1px #B7ABBA; padding: 4px 0px 4px 8px; }
+#mainbody #maincontent #box_center div.azview a { color: #72537A; font-size: 1.3em; text-decoration: none; margin: 0px 4px; text-transform: uppercase; }
+#mainbody #maincontent #box_center div.azview a:hover { text-decoration: underline; }
+#mainbody #maincontent #box_center div.azview a.high { color: #054A88; }
+
+
+/* Tag Styles */
+/* Tag cloud */
+#mainbody #maincontent #box_right .subbox .tagcloud { padding: 10px 0px; }
+#mainbody #maincontent #box_right .subbox .tagcloud ul { list-style: none; margin: 0em 0.5em;}
+#mainbody #maincontent #box_right .subbox .tagcloud li { display: inline; }
+#mainbody #maincontent #box_right .subbox .tagcloud li a { text-decoration: none; }
+#mainbody #maincontent #box_right .subbox .tagcloud li a:hover { color: #8A6F8F; }
+#mainbody #maincontent #box_right .subbox .tagcloud li a.link0 { font-size: .8em; }
+#mainbody #maincontent #box_right .subbox .tagcloud li a.link1 { font-size: .9em; }
+#mainbody #maincontent #box_right .subbox .tagcloud li a.link2 { font-size: 1.1em; }
+#mainbody #maincontent #box_right .subbox .tagcloud li a.link3 { font-size: 1.3em; }
+#mainbody #maincontent #box_right .subbox .tagcloud li a.link4 { font-size: 1.5em; }
+#mainbody #maincontent #box_right .subbox .tagcloud li a.link5 { font-size: 1.8em; }
+#mainbody #maincontent #box_right .subbox .tagcloud li a.link6 { font-size: 2.0em; }
+/* End Tag Styles */
+
+
+/* Comments form */
+div.pageComments label { display: block;}
+div.pageComments input.umbEditorTextField, div.pageComments textarea.umbEditorTextFieldMultiple { width: 400px;}
+
+
+/*custom */
+.docLibraryDesc
+{
+  width: 97%;
+  }
+
+/* Liturgy pages */
+
+.headingA {
+  text-indent : 0em ;
+  line-height : 1.6em ;
+  margin-left : 0em ;
+  font-family : Verdana, Arial, Helvetica, sans-serif ;
+  font-size : 2em;
+}
+
+.HeadingARedItalic  {
+  line-height : 2em;
+  font-family : Verdana, Arial, Helvetica, sans-serif ;
+  font-size : 2em;
+  color : #CC3300 ;
+  font-style : italic;
+}
+
+.vlrubric {
+  font-style: italic;
+  color: #CC3300;
+  font-weight: bold;
+}
+
+/* RSS style override */
+
+#mainbody #maincontent #box_center .blogsarea h3 { 
+  color: #FFF; 
+  margin-bottom: 20px; 
+  line-height: 30px;
+  min-height: 27px; 
+  background-color: #575385;
+  padding-left: 10px;
+}
+#mainbody #maincontent #box_center .blogsarea h3 img { float: right; margin: 2px 5px 0px 0px; }
+#mainbody #maincontent #box_center .blogsarea h3 a { color: #FFF; }
+
+#mainbody #maincontent #box_center .prayerfeed { width: 530px;}
+
+/* Church style override */
+
+#mainbody #maincontent #box_center #cofe-rss-box h2 { margin-right: 0px; font-size: 1.5em; font-weight: bold;}
+
+#mainbody #maincontent #box_center #rss-box-purple p {
+  margin: 0px; 
+  padding-top: 5px;
+  line-height: 1.4em;
+}
+
+#mainbody #maincontent #box_center #cofe-rss-box ul {
+  margin-top: 1em;
+  margin-right: 0em;
+  margin-bottom: 1em;
+  margin-left: 0em;
+  line-height: 1.4em;
+}
+
+.scroll-pane {
+  width: 198px;
+  height: 180px;
+  overflow: auto;
+  background: #F0F0F0;
+  
+}
+/******************additional styles for subscription  box ***********************/
+.box_church_local ul.email_format{  list-style-type:none;}
+
+.box_church_local ul.email_format li label{  color:#553A5E;}
+
+
+/* style for absolute positioned elements */
+.printicon {
+  font-size: .9em;
+  position: absolute;
+  top: 180px;
+  left: 780px;
+  background: url(../images/backgrounds/bg_print.gif) no-repeat;
+  padding-left: 25px;
+  line-height: 20px;
+  height: 20px;
+}
+.printicon a { text-decoration: none; color: #000;}
+
+/* Schools */
+.download-icon img { vertical-align: middle;}
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

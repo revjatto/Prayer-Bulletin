@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+div#box_left ul.sidemenu li.highpar ul { border: solid 4px #E3E3E3; }
+/*div#box_left ul.sidemenu li.par ul li.par ul li.par ul li.par ul  { border: none; }*/
+
+div#box_left ul.sidemenu li.highpar a.parhigh { 
+	background: #F0F0F0 url(../images/icons/icon_arrow_down.gif) no-repeat right 5px; 
+}
+
+#box_left ul.sidemenu li.highpar a.parhigh { color: #553A5E; font-weight:bold; }

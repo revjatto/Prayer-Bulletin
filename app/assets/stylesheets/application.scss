@@ -1,0 +1,108 @@
+$navbar-default-bg: #191970;
+
+
+@import url(https://fonts.googleapis.com/css?family=Lora);
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+
+  font-family: 'Lora', serif;
+  
+  font-size: 14px;
+}
+
+#logo {
+float: left;
+font-size: 1.7em;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: -1px;
+font-weight: bold;
+text-shadow: black 0.3em 0.3em 0.3em;
+}
+#logo:hover {
+color: #fff;
+text-decoration: none;
+}
+.center {
+text-align: center;
+}
+.jumbotron {
+background-image: asset-url('prayer-network.jpg');
+-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    
+    height: 600px;
+    width: 100%;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    
+    margin-bottom: 0px;
+   background-attachment: fixed;
+}
+
+.jumbotron h1 {
+color: #fff;
+text-align: center;
+margin-bottom: 30px;
+letter-spacing: -1px;
+font-weight: bold;
+}
+.btn-xlarge {
+font-size: 1.7em;
+background-color: #000;
+margin-top: 250px;
+text-shadow: black 0.3em 0.3em 0.3em;
+}
+footer {
+margin-top: 45px;
+padding-top: 5px;
+border-top: 1px solid #eaeaea;
+color: #777;
+}
+footer a:hover {
+color: #222;
+}
+footer small {
+float: left;
+}
+footer ul {
+float: right;
+list-style: none;
+}
+footer ul li {
+float: left;
+margin-left: 15px;
+}
+
+.article-actions {
+border-top: 1px solid #eaeaea;
+padding-top: 5px;
+    
+}
+.description {
+margin-top: 0;
+    
+}
+
+.well{
+    background-color: #fff;
+}
+
+article-title {
+font-weight: bold;
+font-size: 1.7em;
+background: #191970;
+    color: #ffffff;
+}
+.article-body {
+border-top: 1px solid #eaeaea;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+.panel-body{
+    font-family: 'Lora', serif;
+    font-size: 16px;
+}

@@ -1,0 +1,44 @@
+<h1 align="center">Listing all Prayers</h1>
+<% @prayers.each do |prayer| %>
+<div class="row">
+<div class="col-xs-8 col-xs-offset-2">
+<div class="well well">
+    
+<div class="article-title">
+    <h3 class="time"><strong>Title: <%= link_to prayer.title, prayer_path(prayer) %> </strong></h3>
+    <p class="time"><strong>Created By: </strong><%= prayer.created_by %></p></h2>
+    <p class="time"><strong>Date Created: </strong> <%= prayer.created_at.strftime("%B %d, %Y") %></p>
+</div>
+
+</div>
+
+</div>
+<% end %>
+<div class="col-sm-4 col-xs-offset-2">
+     <h2>Utilities</h2>
+
+     
+
+     <iframe width="300" height="315" src="https://www.youtube.com/embed/NfXybggH4Qo" frameborder="0" allowfullscreen></iframe>
+     <br/>
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ <!-- Front page - 2 (www.ckwe.co.uk) -->
+ <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-9591689799095900"
+      data-ad-slot="9745791119"
+      data-ad-format="auto"></ins>
+ <script>
+ (adsbygoogle = window.adsbygoogle || []).push({});
+ </script>
+ <p></p>
+ <iframe width="300" height="315" src="https://www.youtube.com/embed/MgEY4hdbxGg" frameborder="0" allowfullscreen></iframe>
+
+ <p></p>
+ <iframe width="300" height="315" src="https://www.youtube.com/embed/enMZyFaQStg" frameborder="0" allowfullscreen></iframe>
+
+ <p></p>
+ <iframe width="300" height="315" src="https://www.youtube.com/embed/ZML6pnSkr8I" frameborder="0" allowfullscreen></iframe>
+   </div>
+</div>
+

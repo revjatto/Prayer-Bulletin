@@ -1,0 +1,2006 @@
+  [1m[36m (19.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (9.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePrayers (20160118224629)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (14.6ms)[0m  [1mCREATE TABLE "prayers" ("id" serial primary key, "title" character varying, "content" text, "created_by" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160118224629"]]
+  [1m[36m (4.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'prayers'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 159.92.61.37 at 2016-02-13 14:02:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PrayersController#home as HTML
+  Rendered prayers/home.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 7533ms (Views: 7512.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayer-network-1a249c29076fc9d185f3574fc9cb80d15a1064fd2641fc8b028671ecf546fb32.jpg" for 159.92.61.37 at 2016-02-13 14:02:37 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:03:09 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (1.0ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 187ms (Views: 181.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/prayers/new" for 159.92.61.37 at 2016-02-13 14:03:16 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#new as HTML
+  Rendered prayers/_form.html.erb (54.2ms)
+  Rendered prayers/new.html.erb within layouts/application (255.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 482ms (Views: 472.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/tinymce/preinit.self-84328a53e798df12f891eb49871773fd9f925439c8630e9e22423a82ef9e6f89.js?body=1" for 159.92.61.37 at 2016-02-13 14:03:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 159.92.61.37 at 2016-02-13 14:03:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/tinymce.self-715a15cb3cb25c032ccc2afacfd8e02d068a7f1ca80de9f7a1adfd7f33eadcf6.js?body=1" for 159.92.61.37 at 2016-02-13 14:03:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers/new" for 66.249.91.233 at 2016-02-13 14:03:36 +0000
+Cannot render console from 66.249.91.233! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#new as */*
+  Rendered prayers/_form.html.erb (3.2ms)
+  Rendered prayers/new.html.erb within layouts/application (31.7ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 167ms (Views: 166.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 66.249.75.204 at 2016-02-13 14:03:39 +0000
+Cannot render console from 66.249.75.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 66.249.75.204 at 2016-02-13 14:03:40 +0000
+Cannot render console from 66.249.75.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:42 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:44 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 66.249.75.204 at 2016-02-13 14:03:44 +0000
+Cannot render console from 66.249.75.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 66.249.75.204 at 2016-02-13 14:03:45 +0000
+Cannot render console from 66.249.75.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:46 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:46 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:47 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:48 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:49 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:50 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:51 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 66.249.75.196 at 2016-02-13 14:03:52 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:53 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:54 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:54 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/preinit.self-84328a53e798df12f891eb49871773fd9f925439c8630e9e22423a82ef9e6f89.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:55 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:56 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 66.249.75.196 at 2016-02-13 14:03:58 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/skins/lightgray/skin.min.css" for 66.249.75.196 at 2016-02-13 14:04:00 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/skins/lightgray/content.min.css" for 66.249.75.196 at 2016-02-13 14:04:00 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 66.249.75.196 at 2016-02-13 14:04:02 +0000
+Cannot render console from 66.249.75.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/prayers" for 159.92.61.37 at 2016-02-13 14:05:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"brj5z8dE3OT97piOjDlWD+zLN3EAUNlICGA77mUyPxLcB6vbHE5Zt3d8uSbG8yNQA0UFE3GCtzPpPmMolK+2xA==", "prayer"=>{"title"=>"Praying For The Nations", "created_by"=>"Revjatto", "content"=>"<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Joel 3:12...........Let the nations be awakened!&nbsp;<br />Isa 1:2..............Let the earth hear the voice of the Lord!&nbsp;<br />Ps 9:20............Judge the nations in Your sight, Father, and put them to fear,&nbsp;<br />Ps 9:20.............that they might know themselves to be but men.&nbsp;<br />Rom 8:22..........Father, the whole creation groans and labors<br />Rom 8:21..........to be delivered from the bondage of corruption,&nbsp;<br />Rom 8:21..........into the glorious liberty of the children of God.&nbsp;<br />Jn 15:26...........Send forth Your Spirit of Truth to bear witness of You,&nbsp;<br />Jn 16:8.............and to convict the world of sin, of righteousness, and of judgment.&nbsp;<br />Eze 14:6..........Cause them to repent and to turn from their idols.&nbsp;<br />Hag 2:7............Shake the nations, so they will come to the Desire of All Nations(Jesus).&nbsp;<br />Num 23:24........Father, cause Your people to rise up.&nbsp;<br />Joel 3:11..........Gather Your mighty ones to prepare for war.<br />Joel 3:14..........Bring the multitudes into the valley of decision.&nbsp;<br />Jer 49:14..........Send Your ambassadors into all the nations.&nbsp;<br />Col. 4:3............Open to them a door for the Word, to speak the mystery of Christ,&nbsp;<br />Mt 24:14...........that the gospel of the kingdom may be preached in all the world.&nbsp;<br />Ps 111:6..........You have declared to Your people the power of Your works,&nbsp;<br />Ps 111:6...........in giving them the heritage of the nations.&nbsp;<br />Phil 2:10...........Let every knee bow and every tongue confess that Jesus is Lord!&nbsp;<br />Isa 61:11...........Cause righteousness and praise to spring forth.&nbsp;<br />Hab 2:14...........Let the earth be filled with the knowledge of the glory&nbsp;<br />Hab 2:14...........of the Lord as the waters cover the sea.&nbsp;<br />Isa 43:9.............Father, gather the nations together,&nbsp;<br />Ps 22:27............that they may worship Thee,&nbsp;<br />Ps 46:10............and exult Thee in all the earth.&nbsp;<br />Gal 3:8...............Let all the nations be blessed through Your people,&nbsp;<br />Zech 14:14.........and let the wealth of the heathen be gathered together&nbsp;<br />2Kin 22:5...........and be delivered into the hands of Your people for the work of the Lord.&nbsp;<br />Isa. 49:6............Send forth Your salvation to the ends of the earth,&nbsp;<br />Mk 12:36...........and make Your enemies to be Your footstool.</p>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">&nbsp;</p>"}, "commit"=>"Create Prayer"}
+  [1m[36m (105.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "prayers" ("title", "content", "created_by", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Praying For The Nations"], ["content", "<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Joel 3:12...........Let the nations be awakened!&nbsp;<br />Isa 1:2..............Let the earth hear the voice of the Lord!&nbsp;<br />Ps 9:20............Judge the nations in Your sight, Father, and put them to fear,&nbsp;<br />Ps 9:20.............that they might know themselves to be but men.&nbsp;<br />Rom 8:22..........Father, the whole creation groans and labors<br />Rom 8:21..........to be delivered from the bondage of corruption,&nbsp;<br />Rom 8:21..........into the glorious liberty of the children of God.&nbsp;<br />Jn 15:26...........Send forth Your Spirit of Truth to bear witness of You,&nbsp;<br />Jn 16:8.............and to convict the world of sin, of righteousness, and of judgment.&nbsp;<br />Eze 14:6..........Cause them to repent and to turn from their idols.&nbsp;<br />Hag 2:7............Shake the nations, so they will come to the Desire of All Nations(Jesus).&nbsp;<br />Num 23:24........Father, cause Your people to rise up.&nbsp;<br />Joel 3:11..........Gather Your mighty ones to prepare for war.<br />Joel 3:14..........Bring the multitudes into the valley of decision.&nbsp;<br />Jer 49:14..........Send Your ambassadors into all the nations.&nbsp;<br />Col. 4:3............Open to them a door for the Word, to speak the mystery of Christ,&nbsp;<br />Mt 24:14...........that the gospel of the kingdom may be preached in all the world.&nbsp;<br />Ps 111:6..........You have declared to Your people the power of Your works,&nbsp;<br />Ps 111:6...........in giving them the heritage of the nations.&nbsp;<br />Phil 2:10...........Let every knee bow and every tongue confess that Jesus is Lord!&nbsp;<br />Isa 61:11...........Cause righteousness and praise to spring forth.&nbsp;<br />Hab 2:14...........Let the earth be filled with the knowledge of the glory&nbsp;<br />Hab 2:14...........of the Lord as the waters cover the sea.&nbsp;<br />Isa 43:9.............Father, gather the nations together,&nbsp;<br />Ps 22:27............that they may worship Thee,&nbsp;<br />Ps 46:10............and exult Thee in all the earth.&nbsp;<br />Gal 3:8...............Let all the nations be blessed through Your people,&nbsp;<br />Zech 14:14.........and let the wealth of the heathen be gathered together&nbsp;<br />2Kin 22:5...........and be delivered into the hands of Your people for the work of the Lord.&nbsp;<br />Isa. 49:6............Send forth Your salvation to the ends of the earth,&nbsp;<br />Mk 12:36...........and make Your enemies to be Your footstool.</p>\r\n<p style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">&nbsp;</p>"], ["created_by", "Revjatto"], ["created_at", "2016-02-13 14:05:46.581376"], ["updated_at", "2016-02-13 14:05:46.581376"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+Redirected to https://prayer-bulletin-revjatto-2.c9users.io/prayers/1
+Completed 302 Found in 124ms (ActiveRecord: 110.9ms)
+
+
+Started GET "/prayers/1" for 159.92.61.37 at 2016-02-13 14:05:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPrayer Load (0.6ms)[0m  SELECT  "prayers".* FROM "prayers" WHERE "prayers"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered prayers/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 254ms (Views: 220.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:06:02 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.6ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 109.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/prayers/new" for 159.92.61.37 at 2016-02-13 14:06:23 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#new as HTML
+  Rendered prayers/_form.html.erb (2.5ms)
+  Rendered prayers/new.html.erb within layouts/application (23.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 139.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/prayers" for 159.92.61.37 at 2016-02-13 14:07:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jKoJCQTfL1qGnfendbWGwPdCyEhKAOvJEH2TbHTw7Qs+FVsd39WqCQwP1g8/f/OfGMz6KjvShbLxI8uqhW1k3Q==", "prayer"=>{"title"=>"Praying For The Government", "created_by"=>"revjatto", "content"=>"<p><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Tim 2:1............Heavenly Father, I give thanks for our government.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1 Tim 2:2...........I pray for all men and women having authority over us in any way.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 1:23..........Pour out Your Spirit upon them and make Your Word known to them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Ps 25:21...........Cause them to be men and women of integrity, obedient concerning us,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1 Tim 2:2...........that we may lead a quiet and peaceable life, in all godliness and honesty.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:10..........Let wisdom enter their hearts, and let knowledge be pleasant to them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:11..........Let discretion preserve them and understanding keep them,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:12..........to deliver them from the way of evil and from evil men.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Psalm 1:1..........Make their hearts and ears attentive to godly counsel,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Chr 20:32.........doing what is right in your sight.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:21..........Let the upright dwell in our government.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 12:27..........Cause there to be a shaking in all areas.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:21..........Let those complete and blameless before You stay.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:22..........and cut off the wicked. Let the unfaithful be rooted out.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Cor 4:5............Bring to light what is hidden in darkness,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Cor 4:5............and expose the secret aims of the hearts.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Rev 2:5.............Let this nation remember from where they have fallen,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Rev 2:5.............repenting, and returning to doing their first works,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Chr 22:19........setting their hearts and their souls to seek the Lord,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Chr 7:14..........humbling themselves, praying, and turning from their wicked ways.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Chr 7:14..........Then hear them, O Lord, and forgive their sins and heal our land.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Acts 26:18........Open their eyes and turn them from darkness to light.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 3:13...........Soften the hearts that are hardened through the deceitfulness of sin.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Ps 107:20..........Deliver them from their destructions.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Pet 3:9............Father, You have been longsuffering toward us,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Pet 3:9............not willing that any should perish,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Pet 3:9............but that all should come to repentance.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Isa 49:22...........Raise up a standard in this nation.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Zech 10:1..........Cause the rains of Your Spirit to flood this land&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Hab 3:2.............and revive Your work in the midst of us.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Isa 59:16...........Raise up intercessors for this nation&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Cor 10:4..........to pull down strongholds over this land.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Isa 40:5............And let the glory of the Lord be revealed!</span></p>"}, "commit"=>"Create Prayer"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "prayers" ("title", "content", "created_by", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Praying For The Government"], ["content", "<p><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Tim 2:1............Heavenly Father, I give thanks for our government.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1 Tim 2:2...........I pray for all men and women having authority over us in any way.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 1:23..........Pour out Your Spirit upon them and make Your Word known to them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Ps 25:21...........Cause them to be men and women of integrity, obedient concerning us,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1 Tim 2:2...........that we may lead a quiet and peaceable life, in all godliness and honesty.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:10..........Let wisdom enter their hearts, and let knowledge be pleasant to them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:11..........Let discretion preserve them and understanding keep them,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:12..........to deliver them from the way of evil and from evil men.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Psalm 1:1..........Make their hearts and ears attentive to godly counsel,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Chr 20:32.........doing what is right in your sight.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:21..........Let the upright dwell in our government.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 12:27..........Cause there to be a shaking in all areas.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:21..........Let those complete and blameless before You stay.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov. 2:22..........and cut off the wicked. Let the unfaithful be rooted out.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Cor 4:5............Bring to light what is hidden in darkness,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Cor 4:5............and expose the secret aims of the hearts.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Rev 2:5.............Let this nation remember from where they have fallen,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Rev 2:5.............repenting, and returning to doing their first works,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Chr 22:19........setting their hearts and their souls to seek the Lord,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Chr 7:14..........humbling themselves, praying, and turning from their wicked ways.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Chr 7:14..........Then hear them, O Lord, and forgive their sins and heal our land.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Acts 26:18........Open their eyes and turn them from darkness to light.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 3:13...........Soften the hearts that are hardened through the deceitfulness of sin.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Ps 107:20..........Deliver them from their destructions.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Pet 3:9............Father, You have been longsuffering toward us,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Pet 3:9............not willing that any should perish,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Pet 3:9............but that all should come to repentance.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Isa 49:22...........Raise up a standard in this nation.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Zech 10:1..........Cause the rains of Your Spirit to flood this land&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Hab 3:2.............and revive Your work in the midst of us.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Isa 59:16...........Raise up intercessors for this nation&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Cor 10:4..........to pull down strongholds over this land.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Isa 40:5............And let the glory of the Lord be revealed!</span></p>"], ["created_by", "revjatto"], ["created_at", "2016-02-13 14:07:19.458304"], ["updated_at", "2016-02-13 14:07:19.458304"]]
+  [1m[35m (6.3ms)[0m  COMMIT
+Redirected to https://prayer-bulletin-revjatto-2.c9users.io/prayers/2
+Completed 302 Found in 14ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/prayers/2" for 159.92.61.37 at 2016-02-13 14:07:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPrayer Load (0.6ms)[0m  [1mSELECT  "prayers".* FROM "prayers" WHERE "prayers"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered prayers/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 117.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:07:23 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (0.5ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 92.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prayers/new" for 159.92.61.37 at 2016-02-13 14:10:32 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#new as HTML
+  Rendered prayers/_form.html.erb (2.2ms)
+  Rendered prayers/new.html.erb within layouts/application (193.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 292ms (Views: 291.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/prayers" for 159.92.61.37 at 2016-02-13 14:11:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3KexwfxJnyKJRC319m5RbEnBp/7tC16kNt6m8XxUwgFuGOPVJ0MacQPWDF28pCQzpk+VnJzZMN/XgP43jclL1w==", "prayer"=>{"title"=>"Praying For The Children", "created_by"=>"revjatto", "content"=>"<p><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Acts 19:20.........I thank you Father that Your Word prevails over our children.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Isa 54:13...........That they are taught of the Lord and continue to be&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov 13:1.......... the fruit of godly instruction and correction.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Isa 54:13...........Great is their peace and undisturbed composure.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov 2:6............ Father, give us counsel and wisdom in bringing up our children.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 1:14.......... I say they are obedient, not conforming to the things of the flesh,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 1:15.......... but holy, in all conduct.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 2:2........... desiring the pure milk of the Word that they may grow thereby.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Jas 1:19............That they are swift to hear, slow to speak, and slow to wrath.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 13:5.......... Their conduct is without covetousness,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 13:5.......... and they are content with what they have.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 13:16......... They do not forget to do what is right and to share.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Pet 3:18.......... I pray that they grow in the grace and knowledge of our Lord,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Thes 4:1......... and abound more and more in how they should walk and please You.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 5:5........... That they submit to their elders, and to one another,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 5:5........... being clothed with humility.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 5:7........... That they cast their cares upon You, Father, for You care for them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Jas 1:22............I thank You that they are doers of the Word, and not hearers only,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Ph'm 1:6...........effectively sharing their faith.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim 1:7 ..........not having a spirit of fear, but of power, love, and a sound mind.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim 1:9...........Father, You have saved them and called them with a holy calling,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim 1:9 ..........not according to works, but according to Your own purpose.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim 4:18.........Deliver them from every evil work and preserve them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">John 10:5 ........They will by no means follow strangers, not knowing their voices.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim2:22 .........They abide with others who call on the Lord out of a pure heart,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Jas 3:10 ..........and cursing comes not out of their mouth.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Jn 5:18 ..........Because Jesus keeps them safe, the wicked one does not touch them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Ps 91:11..........Give Your angels special charge to accompany, defend, preserve&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Ps 4:8.............and provide safety for them, day and night.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Jn 2:5 ...........Because they keep Your Word, Your love is being perfected in them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Jn 2:15 .........They do not love the world or the things in the world,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">3Jn 1:11..........and they do not imitate what is evil, but what is good.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Jn 1:7 ...........They walk in the light as You are in the Light,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Jas 4:8 ...........cleansing their hands and purifying their hearts,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim 2:22 .......They follow after righteousness, faith, love, and peace.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 13:18........They have a good conscience and desire to live honorably,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov 3:4 ..........having favor and high esteem with God and man.</span></p>"}, "commit"=>"Create Prayer"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "prayers" ("title", "content", "created_by", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Praying For The Children"], ["content", "<p><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Acts 19:20.........I thank you Father that Your Word prevails over our children.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Isa 54:13...........That they are taught of the Lord and continue to be&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov 13:1.......... the fruit of godly instruction and correction.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Isa 54:13...........Great is their peace and undisturbed composure.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov 2:6............ Father, give us counsel and wisdom in bringing up our children.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 1:14.......... I say they are obedient, not conforming to the things of the flesh,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 1:15.......... but holy, in all conduct.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 2:2........... desiring the pure milk of the Word that they may grow thereby.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Jas 1:19............That they are swift to hear, slow to speak, and slow to wrath.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 13:5.......... Their conduct is without covetousness,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 13:5.......... and they are content with what they have.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 13:16......... They do not forget to do what is right and to share.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Pet 3:18.......... I pray that they grow in the grace and knowledge of our Lord,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Thes 4:1......... and abound more and more in how they should walk and please You.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 5:5........... That they submit to their elders, and to one another,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 5:5........... being clothed with humility.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Pet 5:7........... That they cast their cares upon You, Father, for You care for them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Jas 1:22............I thank You that they are doers of the Word, and not hearers only,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Ph'm 1:6...........effectively sharing their faith.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim 1:7 ..........not having a spirit of fear, but of power, love, and a sound mind.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim 1:9...........Father, You have saved them and called them with a holy calling,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim 1:9 ..........not according to works, but according to Your own purpose.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim 4:18.........Deliver them from every evil work and preserve them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">John 10:5 ........They will by no means follow strangers, not knowing their voices.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim2:22 .........They abide with others who call on the Lord out of a pure heart,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Jas 3:10 ..........and cursing comes not out of their mouth.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Jn 5:18 ..........Because Jesus keeps them safe, the wicked one does not touch them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Ps 91:11..........Give Your angels special charge to accompany, defend, preserve&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Ps 4:8.............and provide safety for them, day and night.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Jn 2:5 ...........Because they keep Your Word, Your love is being perfected in them.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Jn 2:15 .........They do not love the world or the things in the world,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">3Jn 1:11..........and they do not imitate what is evil, but what is good.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">1Jn 1:7 ...........They walk in the light as You are in the Light,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Jas 4:8 ...........cleansing their hands and purifying their hearts,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">2Tim 2:22 .......They follow after righteousness, faith, love, and peace.&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Heb 13:18........They have a good conscience and desire to live honorably,&nbsp;</span><br style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\" /><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: 20px;\">Prov 3:4 ..........having favor and high esteem with God and man.</span></p>"], ["created_by", "revjatto"], ["created_at", "2016-02-13 14:11:15.582993"], ["updated_at", "2016-02-13 14:11:15.582993"]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+Redirected to https://prayer-bulletin-revjatto-2.c9users.io/prayers/3
+Completed 302 Found in 164ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/prayers/3" for 159.92.61.37 at 2016-02-13 14:11:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPrayer Load (0.5ms)[0m  SELECT  "prayers".* FROM "prayers" WHERE "prayers"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered prayers/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 93ms (Views: 91.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:12:00 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.6ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 201ms (Views: 199.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:12:50 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (0.7ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 306ms (Views: 304.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/prayers/3" for 159.92.61.37 at 2016-02-13 14:12:52 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPrayer Load (0.5ms)[0m  [1mSELECT  "prayers".* FROM "prayers" WHERE "prayers"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered prayers/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 283ms (Views: 281.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:12:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (0.8ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (111.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 240ms (Views: 238.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/prayers/new" for 159.92.61.37 at 2016-02-13 14:12:58 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#new as HTML
+  Rendered prayers/_form.html.erb (3.3ms)
+  Rendered prayers/new.html.erb within layouts/application (32.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 169ms (Views: 168.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/prayers/new" for 159.92.61.37 at 2016-02-13 14:13:54 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#new as HTML
+  Rendered prayers/_form.html.erb (2.9ms)
+  Rendered prayers/new.html.erb within layouts/application (22.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 165ms (Views: 164.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/preinit.self-84328a53e798df12f891eb49871773fd9f925439c8630e9e22423a82ef9e6f89.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/tinymce.self-715a15cb3cb25c032ccc2afacfd8e02d068a7f1ca80de9f7a1adfd7f33eadcf6.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/plugins/image/plugin.js" for 159.92.61.37 at 2016-02-13 14:13:55 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/skins/lightgray/content.min.css" for 159.92.61.37 at 2016-02-13 14:13:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/plugins/link/plugin.js" for 159.92.61.37 at 2016-02-13 14:13:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/themes/modern/theme.js" for 159.92.61.37 at 2016-02-13 14:13:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/skins/lightgray/skin.min.css" for 159.92.61.37 at 2016-02-13 14:13:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/tinymce/skins/lightgray/fonts/tinymce.woff" for 159.92.61.37 at 2016-02-13 14:13:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:13:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.7ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 132ms (Views: 129.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/prayers" for 66.249.91.233 at 2016-02-13 14:14:02 +0000
+Cannot render console from 66.249.91.233! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as */*
+  [1m[35mPrayer Load (0.6ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 166ms (Views: 164.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.5ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 126ms (Views: 124.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:39 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:40 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:40 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:40 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:40 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:14:40 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:15:10 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (0.6ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 277ms (Views: 275.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:10 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:10 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:15:10 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:15:11 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:16:32 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.8ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 279ms (Views: 277.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:32 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:16:32 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:32 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:32 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:32 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:33 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (0.7ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 123ms (Views: 121.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:16:46 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (2.5ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 120ms (Views: 116.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:18:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:20:58 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (6.8ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 141ms (Views: 129.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:20:59 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.8ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 146ms (Views: 144.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:21:45 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (0.6ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (44.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 146ms (Views: 144.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:22:44 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:23:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.6ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 128ms (Views: 126.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:23:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:23:20 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:24:14 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (0.7ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 89ms (Views: 87.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:15 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.6ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 226ms (Views: 224.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:24:31 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:25:16 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (0.5ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:17 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.7ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 151ms (Views: 149.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:25:51 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (0.5ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 150ms (Views: 148.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:19 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.7ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 245ms (Views: 243.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:26:56 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:27:12 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[35mPrayer Load (1.0ms)[0m  SELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC
+  Rendered prayers/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 129ms (Views: 127.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:13 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prayers" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrayersController#index as HTML
+  [1m[36mPrayer Load (0.5ms)[0m  [1mSELECT "prayers".* FROM "prayers"  ORDER BY created_at DESC[0m
+  Rendered prayers/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 164ms (Views: 162.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-afc84c9ff6b3a5ef49247a971eeaa8f405cbfa6c9d4866aeac9297f2d945edc4.css?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prayers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 159.92.61.37 at 2016-02-13 14:27:28 +0000
+Cannot render console from 159.92.61.37! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
